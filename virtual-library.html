@@ -19,7 +19,7 @@
     </div>
     <div class="header-search">
       <span class="search-icon">🔍</span>
-      <input type="text" id="globalSearch" placeholder="Search books…" autocomplete="off" spellcheck="false">
+      <label for="globalSearch"></label><input type="text" id="globalSearch" placeholder="Search books…" autocomplete="off" spellcheck="false">
     </div>
     <div class="header-controls">
       <span id="live-clock"></span>
@@ -115,9 +115,9 @@
           <div class="timer-progress-bar" id="timerBar" style="width:100%"></div>
         </div>
         <div class="timer-input-row">
-          <input type="number" id="timerH" min="0" max="9" value="0" placeholder="HH">h
-          <input type="number" id="timerM" min="0" max="59" value="25" placeholder="MM">m
-          <input type="number" id="timerS" min="0" max="59" value="0" placeholder="SS">s
+          <label for="timerH"></label><input type="number" id="timerH" min="0" max="9" value="0" placeholder="HH">h
+          <label for="timerM"></label><input type="number" id="timerM" min="0" max="59" value="25" placeholder="MM">m
+          <label for="timerS"></label><input type="number" id="timerS" min="0" max="59" value="0" placeholder="SS">s
         </div>
         <div class="timer-controls">
           <button class="btn btn-primary btn-sm" id="timerStart">▶ Start</button>
@@ -147,12 +147,12 @@
       <div class="toolbar">
         <div class="toolbar-search">
           <span class="search-icon">🔍</span>
-          <input type="text" id="localSearch" placeholder="Filter in list…" autocomplete="off">
+          <label for="localSearch"></label><input type="text" id="localSearch" placeholder="Filter in list…" autocomplete="off">
         </div>
       </div>
       <div class="filter-row" style="margin-top:0.75rem">
-        <span style="font-family:var(--font-ui);font-size:0.78rem;color:var(--text-muted)">Filter:</span>
-        <select class="filter-select" id="filterGenre">
+        <span style="font-family:var(--font-ui),serif;font-size:0.78rem;color:var(--text-muted)">Filter:</span>
+        <label for="filterGenre"></label><select class="filter-select" id="filterGenre">
           <option value="">All Genres</option>
           <option>Fiction</option><option>Non-Fiction</option>
           <option>Science Fiction</option><option>Fantasy</option>
@@ -162,13 +162,13 @@
           <option>Science</option><option>Philosophy</option>
           <option>Poetry</option><option>Children</option><option>Other</option>
         </select>
-        <select class="filter-select" id="filterStatus">
+        <label for="filterStatus"></label><select class="filter-select" id="filterStatus">
           <option value="">All Statuses</option>
           <option value="to-read">To Read</option>
           <option value="reading">Reading</option>
           <option value="read">Read</option>
         </select>
-        <select class="filter-select" id="filterRating">
+        <label for="filterRating"></label><select class="filter-select" id="filterRating">
           <option value="">Any Rating</option>
           <option value="5">★★★★★</option>
           <option value="4">★★★★+</option>
@@ -207,10 +207,10 @@
     <form id="modalForm" novalidate>
       <input type="hidden" id="mEditId">
       <div class="form-grid">
-        <div class="form-group full"><label>Title *</label><input type="text" id="mTitle"><span class="field-error" id="mErrTitle">Required (min 2 chars)</span></div>
-        <div class="form-group full"><label>Author *</label><input type="text" id="mAuthor"><span class="field-error" id="mErrAuthor">Required (min 2 chars)</span></div>
+        <div class="form-group full"><label>Title *</label><label for="mTitle"></label><input type="text" id="mTitle"><span class="field-error" id="mErrTitle">Required (min 2 chars)</span></div>
+        <div class="form-group full"><label>Author *</label><label for="mAuthor"></label><input type="text" id="mAuthor"><span class="field-error" id="mErrAuthor">Required (min 2 chars)</span></div>
         <div class="form-group"><label>Genre *</label>
-          <select id="mGenre">
+          <label for="mGenre"></label><select id="mGenre">
             <option value="">— Select —</option>
             <option>Fiction</option><option>Non-Fiction</option>
             <option>Science Fiction</option><option>Fantasy</option>
@@ -223,15 +223,15 @@
           <span class="field-error" id="mErrGenre">Please select a genre</span>
         </div>
         <div class="form-group"><label>Status</label>
-          <select id="mStatus">
+          <label for="mStatus"></label><label for="mStatus"></label><select id="mStatus">
             <option value="to-read">To Read</option>
             <option value="reading">Reading</option>
             <option value="read">Read</option>
           </select>
         </div>
-        <div class="form-group"><label>Year *</label><input type="number" id="mYear" min="1000" max="2100"><span class="field-error" id="mErrYear">Valid year required</span></div>
-        <div class="form-group"><label>Pages</label><input type="number" id="mPages" min="1"><span class="field-error" id="mErrPages">Positive number required</span></div>
-        <div class="form-group full"><label>ISBN / Email</label><input type="text" id="mIsbn"><span class="field-error" id="mErrIsbn">Valid ISBN or email required</span></div>
+        <div class="form-group"><label>Year *</label><label for="mYear"></label><input type="number" id="mYear" min="1000" max="2100"><span class="field-error" id="mErrYear">Valid year required</span></div>
+        <div class="form-group"><label>Pages</label><label for="mPages"></label><label for="mPages"></label><input type="number" id="mPages" min="1"><span class="field-error" id="mErrPages">Positive number required</span></div>
+        <div class="form-group full"><label>ISBN / Email</label><label for="mIsbn"></label><input type="text" id="mIsbn"><span class="field-error" id="mErrIsbn">Valid ISBN or email required</span></div>
         <div class="form-group full"><label>Rating</label>
           <div class="stars-input">
             <input type="radio" name="mRating" id="mr5" value="5"><label for="mr5">★</label>
@@ -241,7 +241,7 @@
             <input type="radio" name="mRating" id="mr1" value="1"><label for="mr1">★</label>
           </div>
         </div>
-        <div class="form-group full"><label>Description</label><textarea id="mDesc" maxlength="500"></textarea></div>
+        <div class="form-group full"><label>Description</label><label for="mDesc"></label><textarea id="mDesc" maxlength="500"></textarea></div>
       </div>
       <div class="form-actions">
         <button type="submit" class="btn btn-primary">💾 Save Changes</button>
